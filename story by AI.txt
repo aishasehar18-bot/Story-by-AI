@@ -1,0 +1,28 @@
+import random
+
+characters = ["Ali", "Sara", "John", "Ayesha", "Bilal"]
+places = ["Karachi", "Lahore", "London", "Paris"]
+problems = ["lost something", "found a secret", "met a stranger", "heard a noise"]
+
+def generate_story():
+    # User input for name
+    user_name = input("Enter a name (or press Enter for random): ")
+    name = user_name if user_name.strip() else random.choice(characters)
+
+    # User input for place
+    user_place = input("Enter a place (or press Enter for random): ")
+    place = user_place if user_place.strip() else random.choice(places)
+
+    # User input for problem
+    user_problem = input("Enter a problem/event (or press Enter for random): ")
+    problem = user_problem if user_problem.strip() else random.choice(problems)
+
+    story = (
+        f"One day, {name} was walking in {place}., they {problem}. "
+        "This changed their life forever, and the adventure began!As they looked around, the air seemed to shift, carrying a strange tension. The streets that once felt familiar now appeared unfamiliar and quiet. Driven by curiosity and a hint of fear, they followed the source of the disturbance deeper into the narrow lanes of the city. Every step echoed louder than the last.Suddenly, they noticed a small, folded piece of paper lying near an old wooden door. It had their name written on it in shaky handwriting. Their heart raced as they picked it up. Inside was a message that simply read, Follow the signs. You are closer than you think.A chill ran down their spine. They hesitated, unsure whether to turn back or keep going. But something inside urged them forward. With steady breaths and cautious steps, they pushed open the door—and stepped into the beginning of a mystery they never expected."
+    )
+
+    return story
+
+print("Your Generated Story:")
+print(generate_story())
